@@ -122,6 +122,12 @@ Ao escolher a opção:
 ```
 
 O sistema adiciona automaticamente 10 itens ao inventário, como teclado, mouse, monitor, notebook, headset, entre outros.
+Além disso, pode usar:
+
+```txt
+1 - Adicionar item
+```
+para adicionar manualmente e como desejar.
 
 Depois disso, o arquivo `Inventario.dat` será criado ou atualizado.
 
@@ -203,29 +209,150 @@ Cada operação, seja ela bem-sucedida ou com falha, gera um registro de log con
 
 ## 10. Cenários de Teste
 
-### Cenário 1: Persistência de Estado
+#Cenário 1: Persistência de Estado
 
-1. Iniciar o programa.
-2. Popular o inventário com a opção `7`.
-3. Listar os itens com a opção `5`.
-4. Encerrar o programa com a opção `0`.
-5. Executar o programa novamente.
-6. Listar os itens novamente.
-7. Verificar se os itens cadastrados continuam no inventário.
+Objetivo: verificar se o sistema salva o inventário no arquivo Inventario.dat e carrega os dados novamente ao reiniciar o programa.
 
-### Cenário 2: Erro de Estoque Insuficiente
+Passos executados
+Iniciar o programa.
+Escolher a opção 7 - Popular com 10 itens de exemplo.
+Escolher a opção 5 - Listar inventário.
+Encerrar o programa com a opção 0.
+Executar o programa novamente.
+Escolher novamente a opção 5 - Listar inventário.
+Exemplo de saída
+====================================
+ Sistema de Inventário em Haskell
+====================================
+Inventário carregado com 0 item(ns).
+Auditoria carregada com 0 registro(s).
 
-1. Iniciar o programa.
-2. Adicionar ou usar um item já existente com determinada quantidade.
-3. Tentar remover uma quantidade maior do que a disponível.
-4. Verificar se o sistema exibe uma mensagem de erro.
-5. Verificar se a falha foi registrada no arquivo `Auditoria.log`.
+========== MENU ==========
+1 - Adicionar item
+2 - Remover quantidade de item
+3 - Atualizar item
+4 - Consultar item
+5 - Listar inventário
+6 - Gerar relatório
+7 - Popular com 10 itens de exemplo
+0 - Sair
+Escolha uma opção: 7
 
-### Cenário 3: Geração de Relatório de Erros
+--- Populando inventário com dados de exemplo ---
+Adicionado: 1
+Adicionado: 2
+Adicionado: 3
+Adicionado: 4
+Adicionado: 5
+Adicionado: 6
+Adicionado: 7
+Adicionado: 8
+Adicionado: 9
+Adicionado: 10
+Processo de população concluído.
 
-1. Executar o Cenário 2.
-2. Escolher a opção `6 - Gerar relatório`.
-3. Verificar se o relatório exibe a falha relacionada à tentativa de remover estoque insuficiente.
+Após escolher a opção 5, a saída esperada é semelhante a:
+
+--- Inventário atual ---
+Item {itemID = "1", nome = "Teclado", quantidade = 10, categoria = "Periféricos"}
+Item {itemID = "2", nome = "Mouse", quantidade = 15, categoria = "Periféricos"}
+Item {itemID = "3", nome = "Monitor", quantidade = 8, categoria = "Vídeo"}
+Item {itemID = "4", nome = "Cabo HDMI", quantidade = 20, categoria = "Cabos"}
+Item {itemID = "5", nome = "Notebook", quantidade = 5, categoria = "Computadores"}
+Item {itemID = "6", nome = "Webcam", quantidade = 7, categoria = "Periféricos"}
+Item {itemID = "7", nome = "Headset", quantidade = 12, categoria = "Áudio"}
+Item {itemID = "8", nome = "SSD", quantidade = 9, categoria = "Armazenamento"}
+Item {itemID = "9", nome = "Memória RAM", quantidade = 14, categoria = "Hardware"}
+Item {itemID = "10", nome = "Fonte", quantidade = 6, categoria = "Hardware"}
+
+Depois de encerrar e executar novamente o programa, a saída inicial deve indicar que os itens foram carregados:
+
+====================================
+ Sistema de Inventário em Haskell
+====================================
+Inventário carregado com 10 item(ns).
+Auditoria carregada com 11 registro(s).
+
+Isso confirma que o arquivo Inventario.dat foi criado e que o estado do inventário foi persistido entre diferentes execuções.
+
+#Cenário 2: Erro de Estoque Insuficiente
+
+Objetivo: verificar se o sistema impede a remoção de uma quantidade maior do que a disponível no estoque e registra a falha no arquivo Auditoria.log.
+
+Passos executados
+Iniciar o programa com o inventário já populado.
+Escolher a opção 2 - Remover quantidade de item.
+Informar o ID 1, referente ao item Teclado.
+Informar a quantidade 15, sendo que o item possui apenas 10 unidades.
+Verificar a mensagem de erro.
+Verificar se a falha foi registrada no log.
+Exemplo de saída
+========== MENU ==========
+1 - Adicionar item
+2 - Remover quantidade de item
+3 - Atualizar item
+4 - Consultar item
+5 - Listar inventário
+6 - Gerar relatório
+7 - Popular com 10 itens de exemplo
+0 - Sair
+Escolha uma opção: 2
+
+--- Remover quantidade de item ---
+ID do item: 1
+Quantidade a remover: 15
+Erro: Estoque insuficiente.
+
+Após esse teste, o item continua com a quantidade original, pois a operação falhou e o inventário não foi sobrescrito.
+
+Ao listar o inventário novamente, o item ainda aparece com 10 unidades:
+
+Item {itemID = "1", nome = "Teclado", quantidade = 10, categoria = "Periféricos"}
+
+Esse comportamento confirma que falhas de lógica não alteram o arquivo Inventario.dat, mas são registradas no arquivo Auditoria.log.
+
+#Cenário 3: Geração de Relatório de Erros
+
+Objetivo: verificar se o comando de relatório exibe os registros de erro armazenados no arquivo Auditoria.log.
+
+Passos executados
+Executar o Cenário 2 para gerar uma falha de estoque insuficiente.
+Escolher a opção 6 - Gerar relatório.
+Verificar se o relatório exibe a falha registrada.
+Exemplo de saída
+========== MENU ==========
+1 - Adicionar item
+2 - Remover quantidade de item
+3 - Atualizar item
+4 - Consultar item
+5 - Listar inventário
+6 - Gerar relatório
+7 - Popular com 10 itens de exemplo
+0 - Sair
+Escolha uma opção: 6
+
+===== RELATÓRIO DE AUDITORIA =====
+Total de registros no log: 12
+Total de falhas: 1
+
+----- ITENS MAIS MOVIMENTADOS -----
+1: 2 operação(ões)
+2: 1 operação(ões)
+3: 1 operação(ões)
+4: 1 operação(ões)
+5: 1 operação(ões)
+6: 1 operação(ões)
+7: 1 operação(ões)
+8: 1 operação(ões)
+9: 1 operação(ões)
+10: 1 operação(ões)
+
+----- LOGS DE ERRO -----
+2026-06-12 20:15:43.000000 UTC | Remove | Item: 1 | Tentativa de remover item. | Falha "Estoque insuficiente."
+
+A data e o horário podem variar conforme o momento em que o programa for executado.
+
+Esse teste confirma que o sistema registra operações malsucedidas no arquivo Auditoria.log e consegue gerar relatórios a partir dos registros armazenados.
 
 ## 11. Observações
 
