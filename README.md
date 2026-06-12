@@ -3,7 +3,9 @@
 ## 1. Informações do Trabalho
 
 **Instituição:** [PUCPR - Pontifícia Universidade Católica do Paraná]
+
 **Disciplina:** [Programação Lógica e Funcional]
+
 **Professor(a):** [Frank Coelho de Alcantara]
 
 ## 2. Integrantes do Grupo
