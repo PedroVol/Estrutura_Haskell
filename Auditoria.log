@@ -1,0 +1,28 @@
+LogEntry {timestamp = 2026-06-12 21:22:45.431144698 UTC, acao = Add, itemAfetado = "1", detalhes = "Item adicionado: Item {itemID = \"1\", nome = \"Teclado\", quantidade = 10, categoria = \"Perif\\233ricos\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.431445232 UTC, acao = Add, itemAfetado = "2", detalhes = "Item adicionado: Item {itemID = \"2\", nome = \"Mouse\", quantidade = 15, categoria = \"Perif\\233ricos\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.431601243 UTC, acao = Add, itemAfetado = "3", detalhes = "Item adicionado: Item {itemID = \"3\", nome = \"Monitor\", quantidade = 8, categoria = \"V\\237deo\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.431704351 UTC, acao = Add, itemAfetado = "4", detalhes = "Item adicionado: Item {itemID = \"4\", nome = \"Cabo HDMI\", quantidade = 20, categoria = \"Cabos\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.431837086 UTC, acao = Add, itemAfetado = "5", detalhes = "Item adicionado: Item {itemID = \"5\", nome = \"Notebook\", quantidade = 5, categoria = \"Computadores\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.432003585 UTC, acao = Add, itemAfetado = "6", detalhes = "Item adicionado: Item {itemID = \"6\", nome = \"Webcam\", quantidade = 7, categoria = \"Perif\\233ricos\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.432183772 UTC, acao = Add, itemAfetado = "7", detalhes = "Item adicionado: Item {itemID = \"7\", nome = \"Headset\", quantidade = 12, categoria = \"\\193udio\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.432377448 UTC, acao = Add, itemAfetado = "8", detalhes = "Item adicionado: Item {itemID = \"8\", nome = \"SSD\", quantidade = 9, categoria = \"Armazenamento\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.432565366 UTC, acao = Add, itemAfetado = "9", detalhes = "Item adicionado: Item {itemID = \"9\", nome = \"Mem\\243ria RAM\", quantidade = 14, categoria = \"Hardware\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:45.432759452 UTC, acao = Add, itemAfetado = "10", detalhes = "Item adicionado: Item {itemID = \"10\", nome = \"Fonte\", quantidade = 6, categoria = \"Hardware\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:22:47.918820454 UTC, acao = Query, itemAfetado = "SISTEMA", detalhes = "Comando inv\225lido: ", status = Falha "Op\231\227o inv\225lida no menu."}
+LogEntry {timestamp = 2026-06-12 21:22:55.175997442 UTC, acao = Add, itemAfetado = "1", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.17614704 UTC, acao = Add, itemAfetado = "2", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176227897 UTC, acao = Add, itemAfetado = "3", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176314709 UTC, acao = Add, itemAfetado = "4", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176365061 UTC, acao = Add, itemAfetado = "5", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176416645 UTC, acao = Add, itemAfetado = "6", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176468267 UTC, acao = Add, itemAfetado = "7", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176536895 UTC, acao = Add, itemAfetado = "8", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176598052 UTC, acao = Add, itemAfetado = "9", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:22:55.176652949 UTC, acao = Add, itemAfetado = "10", detalhes = "Tentativa de popular item de exemplo.", status = Falha "J\225 existe um item com esse ID."}
+LogEntry {timestamp = 2026-06-12 21:23:42.218656228 UTC, acao = Query, itemAfetado = "TODOS", detalhes = "Listagem completa do invent\225rio.", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:28:06.888484796 UTC, acao = Query, itemAfetado = "TODOS", detalhes = "Listagem completa do invent\225rio.", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:28:40.558583901 UTC, acao = Remove, itemAfetado = "1", detalhes = "Tentativa de remover item.", status = Falha "Estoque insuficiente."}
+LogEntry {timestamp = 2026-06-12 21:28:56.615651612 UTC, acao = Remove, itemAfetado = "1", detalhes = "Removidas 5 unidades.", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:29:26.742309408 UTC, acao = Query, itemAfetado = "1", detalhes = "Consulta realizada: Item {itemID = \"1\", nome = \"Teclado\", quantidade = 5, categoria = \"Perif\\233ricos\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:30:18.405021792 UTC, acao = Update, itemAfetado = "1", detalhes = "Item atualizado: Item {itemID = \"1\", nome = \"TecladoClone\", quantidade = 10, categoria = \"Perif\\\\233ricos\"}", status = Sucesso}
+LogEntry {timestamp = 2026-06-12 21:30:24.280106184 UTC, acao = Report, itemAfetado = "SISTEMA", detalhes = "Relat\243rio de auditoria gerado pelo comando report.", status = Sucesso}
