@@ -20,7 +20,7 @@ Os integrantes estão listados
 
 O programa pode ser executado no ambiente online abaixo:
 
-**Link:** [Cole aqui o link do Online GDB ou Replit]
+**Link:** [https://www.onlinegdb.com/edit/Qliw4BC9e]
 
 ## 4. Descrição do Projeto
 
