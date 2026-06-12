@@ -10,7 +10,7 @@
 
 ## 2. Integrantes do Grupo
 
-Os integrantes estão listados em ordem alfabética
+Os integrantes estão listados
 
 | Nome do aluno | Usuário do GitHub |
 | ------------- | ----------------- |
